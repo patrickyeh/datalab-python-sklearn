@@ -1,9 +1,9 @@
 __author__ = 'Vetom'
-from datalab.Model import ClassificationModel
+from datalabsdk.Model import ClassificationModel
 import numpy as np
 from sklearn.neighbors import RadiusNeighborsClassifier
 from sklearn import tree
-from datalab.DataTransform import DataTransform
+from datalabsdk.DataTransform import DataTransform
 
 class DecisionTreeModel(ClassificationModel):
     def __init__(self):

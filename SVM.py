@@ -1,8 +1,8 @@
 __author__ = 'Vetom'
-from datalab.Model import ClassificationModel
+from datalabsdk.Model import ClassificationModel
 import numpy as np
 from sklearn import svm
-from datalab.DataTransform import DataTransform
+from datalabsdk.DataTransform import DataTransform
 
 class SVMModel(ClassificationModel):
     def __init__(self):
