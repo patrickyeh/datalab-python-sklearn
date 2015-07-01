@@ -3,28 +3,28 @@ __author__ = 'Vetom'
 algorithms = [
     {
         'name': 'DecisionTree',
-        'module':'DecisionTreeModel',
+        'module':'DecisionTreeModel.py',
         'entry_class': 'DecisionTreeModel',
         'description': 'Sklearn decision tree model',
         'require_params': []
     },
     {
         'name': 'Lasso',
-        'module':'Lasso',
+        'module':'Lasso.py',
         'entry_class': 'LassoModel',
         'description': 'Sklearn Lasso',
         'require_params': []
     },
     {
         'name': 'SGDClassifier',
-        'module':'SGDClassifier',
+        'module':'SGDClassifier.py',
         'entry_class': 'SGDClassifier',
         'description': 'Sklearn SGDClassifier',
         'require_params': []
     },
     {
         'name': 'Support Vector Machine',
-        'module':'SVM',
+        'module':'SVM.py',
         'entry_class': 'SVM',
         'description': 'Sklearn SGDClassifier',
         'require_params': []
