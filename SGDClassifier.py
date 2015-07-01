@@ -1,5 +1,5 @@
 __author__ = 'Vetom'
-from datalab.Model import ClassificationModel
+from datalabsdk.Model import ClassificationModel
 import numpy as np
 from sklearn import linear_model
 
