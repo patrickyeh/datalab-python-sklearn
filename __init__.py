@@ -4,28 +4,28 @@ algorithms = [
     {
         'name': 'DecisionTree',
         'module':'DecisionTreeModel',
-        'class': 'DecisionTreeModel',
+        'entry_class': 'DecisionTreeModel',
         'description': 'Sklearn decision tree model',
         'require_params': []
     },
     {
         'name': 'Lasso',
         'module':'Lasso',
-        'class': 'LassoModel',
+        'entry_class': 'LassoModel',
         'description': 'Sklearn Lasso',
         'require_params': []
     },
     {
         'name': 'SGDClassifier',
         'module':'SGDClassifier',
-        'class': 'SGDClassifier',
+        'entry_class': 'SGDClassifier',
         'description': 'Sklearn SGDClassifier',
         'require_params': []
     },
     {
         'name': 'Support Vector Machine',
         'module':'SVM',
-        'class': 'SVM',
+        'entry_class': 'SVM',
         'description': 'Sklearn SGDClassifier',
         'require_params': []
     },
