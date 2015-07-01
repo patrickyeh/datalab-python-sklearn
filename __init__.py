@@ -25,7 +25,7 @@ algorithms = [
     {
         'name': 'Support Vector Machine',
         'module':'SVM.py',
-        'entry_class': 'SVM',
+        'entry_class': 'SVMModel',
         'description': 'Sklearn SGDClassifier',
         'require_params': []
     },
