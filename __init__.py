@@ -18,7 +18,7 @@ algorithms = [
     {
         'name': 'SGDClassifier',
         'module':'SGDClassifier.py',
-        'entry_class': 'SGDClassifier',
+        'entry_class': 'SGDClassifierModel',
         'description': 'Sklearn SGDClassifier',
         'require_params': []
     },
