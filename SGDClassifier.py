@@ -32,11 +32,3 @@ class SGDClassifierModel(ClassificationModel):
 
     def validate_by_object(self,obj_test_x,obj_test_y):
         return self.model.score(obj_test_x,obj_test_y)
-
-
-
-
-if __name__ == '__main__':
-    obj_model = SGDClassifierModel()
-    obj_model.train('C:/data/a3a',n_features=123)
-    print obj_model.validate_by_file('C:/data/a3a.t',n_features=123)
