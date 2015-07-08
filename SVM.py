@@ -9,6 +9,7 @@ class SVMModel(ClassificationModel):
         self.model = None
 
     def train(self,input_path,**param):
+        self.update_param(param)
         obj_dt = DataTransform(input_path,param)
         obj_dt.scan_data_type()
         x,y = obj_dt.fetch_data()

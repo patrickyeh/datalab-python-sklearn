@@ -10,6 +10,9 @@ class DecisionTreeModel(ClassificationModel):
         self.model = None
 
     def train(self,input_path,**param):
+        self.update_param(param)
+        if not self.int_dimension == None:
+            param['n_features'] = self.int_dimension
         obj_dt = DataTransform(input_path,param)
         obj_dt.scan_data_type()
         x,y = obj_dt.fetch_data()
@@ -18,6 +21,7 @@ class DecisionTreeModel(ClassificationModel):
         self.model = model
 
         return model
+
 
     def predict_by_file(self,input_path,**param):
         x,y = self._fetch_file(input_path,**param)
@@ -34,9 +38,3 @@ class DecisionTreeModel(ClassificationModel):
         return self.model.score(obj_test_x,obj_test_y)
 
 
-
-
-if __name__ == '__main__':
-    obj_model = DecisionTreeModel()
-    obj_model.train('C:/data/a3a',n_features=123)
-    print obj_model.validate_by_file('C:/data/a3a.t',n_features=123)

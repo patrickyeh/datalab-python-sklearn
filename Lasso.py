@@ -10,6 +10,7 @@ class LassoModel(ClassificationModel):
         self.model = None
 
     def train(self,input_path,**param):
+        self.update_param(param)
         obj_dt = DataTransform(input_path,param)
         obj_dt.scan_data_type()
         x,y = obj_dt.fetch_data()
@@ -28,15 +29,12 @@ class LassoModel(ClassificationModel):
         return self.validate_by_object(x,y)
 
     def predict_by_object(self,obj_array):
-        return self.model.predict(obj_array)
+        prdict_y = self.model.predict(obj_array)
+        prdict_y[prdict_y>0] = 1
+        prdict_y[prdict_y<=0] = -1
+        return prdict_y
 
     def validate_by_object(self,obj_test_x,obj_test_y):
         return self.model.score(obj_test_x,obj_test_y)
 
 
-
-
-if __name__ == '__main__':
-    obj_model = LassoModel()
-    obj_model.train('C:/data/a3a',n_features=123)
-    print obj_model.validate_by_file('C:/data/a3a.t',n_features=123)
